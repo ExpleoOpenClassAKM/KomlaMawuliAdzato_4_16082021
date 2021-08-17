@@ -321,6 +321,12 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+
+.close:hover,
+.close:focus {
+  background-color: #fe142f;
+}
+
 .btn-submit,
 .btn-signup {
   background: #fe142f;
@@ -333,6 +339,11 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+.btn-submit:hover {
+  background-color: #3876ac;
+}
+
 /* custom select styles */
 .custom-select {
   position: relative;
