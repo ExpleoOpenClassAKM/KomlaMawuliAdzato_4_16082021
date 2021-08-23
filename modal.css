@@ -209,12 +209,12 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: 0.6em;
   color: #e54858;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
+  text-align: center;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
@@ -228,7 +228,7 @@ input {
  
 input[data-error]::after {
     content: attr(data-error);
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: red;
 } 
 .checkbox-label,
@@ -541,16 +541,94 @@ footer {
 /* Submit confirmation */
 .submitConfirmation-container {
   display: none;
-  background-color: rgba(35, 35, 35, .5);
+  background-color: rgba(26, 39, 156, 0.4);
   width: 100%;
-  height: 200vh;
+  max-width: auto;
+  height: 180vh;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 1;
 }
 
+.submitConfirmation-form {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+}
 
+.submitConfirmation-form {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  height: 80vh;
+  text-align: center;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.submitConfirmation-closeX {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+  color: #ffffff;
+}
+
+.submitConfirmation-form-msg {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.submitConfirmation-closeX:before,
+.submitConfirmation-closeX:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.submitConfirmation-closeX:after {
+  transform: rotate(45deg);
+}
+
+.submitConfirmation-closeX:before {
+  transform: rotate(-45deg);
+}
+
+.submitConfirmation-closeX:hover,
+.submitConfirmation-closeX:focus {
+  background-color: #fe142f;
+}
+
+.submitConfirmation-closeBtn {
+  background-color: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 50px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  position: relative;
+}

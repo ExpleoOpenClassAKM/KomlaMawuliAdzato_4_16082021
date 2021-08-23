@@ -170,7 +170,7 @@
               </div>
 
               <div
-                class="formData" data-error="Vous devez accepter les conditions d'utlisation pour valider votre inscription !" data-error-visible:="false">
+                class="formData" data-error="Vous devez accepter les conditions d'utlisation pour continuer !" data-error-visible:="false">
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -202,12 +202,14 @@
 
       <!-- Submit confirmation -->
       <div id="submitConfirmation-container" class="submitConfirmation-container">
-        <div id="form-submit">
-          <span id="submitConfirmation-closeX" class="submitConfirmation-closeX close"></span>
-          <p>Merci !</p><br>
-          <p>Votre réservation a été reçue .</p>
+        <div id="submitConfirmation-form" class="submitConfirmation-form">
+          <span id="submitConfirmation-closeX" class="submitConfirmation-closeX"></span>
+          <div class="submitConfirmation-form-msg">
+            <p>Merci !</p><br>
+            <p>Votre réservation a été bien reçue .</p>
+          </div>
+          <button id="submitConfirmation-closeBtn" class="button submitConfirmation-closeBtn">Fermer</button>
         </div>
-        <button id="submitConfirmation-closeBtn" class="button">Fermer</button>
       </div>
     </main>
     <footer>
