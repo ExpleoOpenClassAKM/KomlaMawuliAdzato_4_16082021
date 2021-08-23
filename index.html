@@ -61,10 +61,11 @@
           <!-- Modal Body -->
           <div class="modal-body">
             <form
+              id="modal-form"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();">
+              >
               <!-- Get player identity -->
               <div class="formData" data-error="Veuillez renseigner votre prénom: minimum deux caractères !" data-error-visible:="false">
                 <label>Prénom</label><br>
@@ -73,10 +74,10 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2" required
+                  minlength="2"
                 /><br>
               </div>
-              <div class="formData" data-error="Veuillez renseigner votre nom: minimum deux caractères !" data-error-visible:="false">
+              <div class="formData" data-error="Veuillez renseigner votre nom !" data-error-visible:="false">
                 <label>Nom</label><br>
                 <input
                   class="text-control"
@@ -111,7 +112,7 @@
               </div>
               <!-- Locations -->
               <p class="text-label">Quelles villes ?</p>
-              <div class="formData" data-error="Veuillez sélectionner une ville !">
+              <div class="formData" id="location-box" data-error="Veuillez sélectionner une ville !" data-error-visible:="false">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -169,7 +170,7 @@
               </div>
 
               <div
-                class="formData" data-error="Vous devez accepter les conditions d'utlisation pour valider votre inscription !">
+                class="formData" data-error="Vous devez accepter les conditions d'utlisation pour valider votre inscription !" data-error-visible:="false">
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -190,7 +191,7 @@
               </div>
               <!-- Submit button -->
               <input
-                class="btn-submit"
+                class="btn-submit" id="submit-btn"
                 type="submit"
                 class="button"
                 value="C'est parti"/>
@@ -200,8 +201,13 @@
       </div>
 
       <!-- Submit confirmation -->
-      <div >
-
+      <div id="submitConfirmation-container" class="submitConfirmation-container">
+        <div id="form-submit">
+          <span id="submitConfirmation-closeX" class="submitConfirmation-closeX close"></span>
+          <p>Merci !</p><br>
+          <p>Votre réservation a été reçue .</p>
+        </div>
+        <button id="submitConfirmation-closeBtn" class="button">Fermer</button>
       </div>
     </main>
     <footer>
