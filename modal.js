@@ -56,6 +56,7 @@ const modalSubmitClose = document.getElementById('submitConfirmation-closeX');
 const modalSubmitConfirmationCloseBtn = document.getElementById('submitConfirmation-closeBtn');
 
 
+
 // First lette of Last name and First name in capital letters
 /* function firstLetterOfNameInCapitalLetters(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -225,5 +226,3 @@ formControl.addEventListener('submit', function(event) {
     formFieldAllElementsValidation();
   }
 });
-
-
