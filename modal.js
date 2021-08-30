@@ -173,7 +173,7 @@ function formValidation() {
       numberOfTournamentParticipatedCheck() === true &&
       locationBoxCheck() === true &&
       termsOfUsecheck() === true) {
-        return true;
+    return true;
   }
   return false;
 }
