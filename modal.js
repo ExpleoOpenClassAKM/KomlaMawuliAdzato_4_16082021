@@ -91,12 +91,18 @@ function userEmailCheck() {
   return false;
 }
 
-// Birthday check 
+// Birthdate check 
 function userBirthdateCheck() {
-  if (userBirthdate.value.trim().length !== 10) {
+  // Get today's date and compare it to the user birthdate
+  const nowDate = new Date();
+  todayDate = (nowDate.getFullYear()) + "-" + (nowDate.getMonth()+1) + "-" + nowDate.getDate();
+  todayDate = new Date(todayDate);
+  userBirthdateBis = new Date(userBirthdate.value);
+
+  if (userBirthdate.value.trim().length !== 10 || userBirthdateBis > todayDate) {
     userBirthdate.parentElement.setAttribute('data-error-visible', 'true');
     userBirthdate.style.border = "2px solid #e54858";
-    return false
+    return false;
   }
   userBirthdate.parentElement.setAttribute('data-error-visible', 'false');
   userBirthdate.style.border = "2px solid #279e7a";
