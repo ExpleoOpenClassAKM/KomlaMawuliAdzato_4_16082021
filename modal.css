@@ -175,6 +175,11 @@ input {
   font-size: 20px;
   height: 48px;
 }
+
+.formData {
+  border-radius: 8px;
+  padding: 5px;
+}
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.6em;
@@ -182,10 +187,11 @@ input {
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: center;
+  text-align: left;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
@@ -478,7 +484,6 @@ footer {
     display: block;
     text-align: left;
   }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -524,6 +529,24 @@ footer {
   .copyrights {
     margin-top: 50px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 950px) {
+  .hero-headline {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .formData[data-error]::after {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .formData[data-error]::after {
+    font-size: 0.45em;
   }
 }
 

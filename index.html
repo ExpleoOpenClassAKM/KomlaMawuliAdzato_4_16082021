@@ -2,21 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Reservation</title>
+    <title>Reservation GameOn</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"/>
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <div class="topnav" id="myTopnav">
         <div class="header-logo">
-          <img alt="logo" src="Logo.png" width="auto" height="auto" />
+          <img alt="logo" src="Logo.png"/>
         </div>
         <div class="main-navbar">
           <a href="#" class="active"><span>Accueil</span></a>
@@ -67,8 +65,8 @@
               method="get"
               >
               <!-- Get player identity -->
-              <div class="formData" data-error="Veuillez renseigner votre prénom: minimum deux caractères !" data-error-visible:="false">
-                <label>Prénom</label><br>
+              <div class="formData" data-error="Doit contenir au moins 2 caractères !" data-error-visible="false">
+                <label>Prénom :</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -77,8 +75,8 @@
                   minlength="2"
                 /><br>
               </div>
-              <div class="formData" data-error="Veuillez renseigner votre nom !" data-error-visible:="false">
-                <label>Nom</label><br>
+              <div class="formData" data-error="Doit contenir au moins 2 caractères !" data-error-visible="false">
+                <label>Nom :</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -86,8 +84,8 @@
                   name="last"
                 /><br>
               </div>
-              <div class="formData" data-error="Veuillez renseigner votre adresse mail !" data-error-visible:="false">
-                <label>E-mail</label><br>
+              <div class="formData" data-error="Doit contenir une adresse mail valide !" data-error-visible="false">
+                <label>E-mail :</label><br>
                 <input
                   class="text-control email"
                   type="email"
@@ -96,8 +94,8 @@
                   placeholder="exemple@serveur.com"
                 /><br>
               </div>
-              <div class="formData" data-error="Veuillez renseigner votre date de naissance !" data-error-visible:="false">
-                <label>Date de naissance</label><br>
+              <div class="formData" data-error="Date de naissance non valide !" data-error-visible="false">
+                <label>Date de naissance :</label><br>
                 <input
                   class="text-control"
                   type="date"
@@ -106,13 +104,13 @@
                 /><br>
               </div>
               <!-- Get number of tournaments participated -->
-              <div class="formData" data-error="Veuillez indiquer le nombre de tournois déjà participés !" data-error-visible:="false">
+              <div class="formData" data-error="Doit contenir une valeur numérique !" data-error-visible="false">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <!-- Locations -->
               <p class="text-label">Quelles villes ?</p>
-              <div class="formData" id="location-box" data-error="Veuillez sélectionner une ville !" data-error-visible:="false">
+              <div class="formData location-box" id="location-box" data-error="Aucune ville sélectionnée !" data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -168,16 +166,15 @@
                   <span class="checkbox-icon"></span>
                   Portland</label>
               </div>
-
               <div
-                class="formData" data-error="Vous devez accepter les conditions d'utlisation pour continuer !" data-error-visible:="false">
+                class="formData" data-error="Obligation d'accepter les conditions d'utlisation !" data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
                   checked/>
                   <!-- Terms of uses -->
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -193,13 +190,11 @@
               <input
                 class="btn-submit" id="submit-btn"
                 type="submit"
-                class="button"
                 value="C'est parti"/>
             </form>
           </div>
         </div>
       </div>
-
       <!-- Submit confirmation -->
       <div id="submitConfirmation-container" class="submitConfirmation-container">
         <div id="submitConfirmation-form" class="submitConfirmation-form">
@@ -213,6 +208,7 @@
         </div>
       </div>
     </main>
+    <!-- FOOTER -->
     <footer>
       <p class="copyrights">
         Copyright 2014 - 2020, GameOn Inc.

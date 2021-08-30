@@ -1,41 +1,9 @@
-// Responsive
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".close"); // Get close button
 
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// launch modal form
-function launchModal() {
-  modalbg.style.display = "block";
-}
-
-/* Close the Modal by window clicking
-window.onclick = function(event) {
-  if (event.target === modalbg) {
-    modalbg.style.display = "none";
-  }
-}
-*/
-
-// Close the Modal by clicking on "close button"
-closeBtn.onclick = function() {
-  modalbg.style.display = "none";
-}
-
-//******************************** */
 // Get Form elements
 const userFirstName = document.getElementById('first');
 const userLastName = document.getElementById('last');
@@ -50,19 +18,38 @@ const formControl = document.getElementById('modal-form');
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-// Get form submit and confirmation ***********************
+// Get form submit and confirmation
 const modalSubmit = document.getElementById('submitConfirmation-container');
 const modalSubmitClose = document.getElementById('submitConfirmation-closeX');
 const modalSubmitConfirmationCloseBtn = document.getElementById('submitConfirmation-closeBtn');
 
 
-
-// First lette of Last name and First name in capital letters
-/* function firstLetterOfNameInCapitalLetters(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+//************************************************************* */
+// Responsive
+function editNav() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
 }
-*/ 
 
+//************************************************************* */
+// launch modal event
+modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+
+// launch modal form
+function launchModal() {
+  modalbg.style.display = "block";
+}
+
+// Close the Modal by clicking on "close button"
+closeBtn.onclick = function() {
+  modalbg.style.display = "none";
+}
+
+//************************************************************ */
 // Validation field form
 // User identity check
 
@@ -124,10 +111,10 @@ function numberOfTournamentParticipatedCheck() {
        numberOfTournamentParticipated.parentElement.setAttribute('data-error-visible', 'true');
        numberOfTournamentParticipated.style.border = "2px solid #e54858";
        return false;
-     }
-     numberOfTournamentParticipated.parentElement.setAttribute('data-error-visible', 'false');
-     numberOfTournamentParticipated.style.border = "2px solid #279e7a";
-     return true;
+  }
+  numberOfTournamentParticipated.parentElement.setAttribute('data-error-visible', 'false');
+  numberOfTournamentParticipated.style.border = "2px solid #279e7a";
+  return true;
 }
 
 // Locations check
@@ -138,7 +125,9 @@ function locationBoxCheck() {
       allLocationsBox.setAttribute('data-error-visible', 'false');
       return true;
     }
+    allLocationsBox.style.border = "2px solid #279e7a";
   }
+  allLocationsBox.style.border = "2px solid red";
   return false;
 }
 
@@ -185,11 +174,11 @@ function formValidation() {
       locationBoxCheck() === true &&
       termsOfUsecheck() === true) {
         return true;
-      }
+  }
   return false;
 }
 
-// ***********************
+//************************************************************ */
 // Form submit
 
 // Modal submit confirmation
@@ -213,9 +202,7 @@ function submitConfirmationClose() {
 modalSubmitClose.addEventListener('click', submitConfirmationClose);
 modalSubmitConfirmationCloseBtn.addEventListener('click', submitConfirmationClose);
 
-
-
-// *************************
+//************************************************************ */
 // Form send
 formControl.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -224,5 +211,5 @@ formControl.addEventListener('submit', function(event) {
     document.querySelector('#modal-form').reset();
   } else {
     formFieldAllElementsValidation();
-  }
+    }
 });
