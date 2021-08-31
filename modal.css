@@ -580,7 +580,7 @@ footer {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  height: 90vh;
+  height: auto;
   text-align: center;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -588,8 +588,9 @@ footer {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  font-size: 1.25rem;
   color: #fff;
-  padding-top: 10px;
+  padding: 10px 10px 100px 10px;
   top: 10px;
 }
 
