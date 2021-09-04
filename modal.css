@@ -542,6 +542,9 @@ footer {
   .formData[data-error]::after {
     font-size: 0.5em;
   }
+  .submitConfirmation-form {
+    overflow-wrap: break-word;
+  }
 }
 
 @media screen and (max-width: 300px) {

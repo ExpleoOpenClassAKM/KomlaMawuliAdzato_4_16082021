@@ -62,8 +62,7 @@
               id="modal-form"
               name="reserve"
               action="index.html"
-              method="get"
-              >
+              method="get">
               <!-- Get player identity -->
               <div class="formData" data-error="Doit contenir au moins 2 caractères !" data-error-visible="false">
                 <label>Prénom :</label><br>
@@ -72,8 +71,7 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
-                /><br>
+                  minlength="2"/><br>
               </div>
               <div class="formData" data-error="Doit contenir au moins 2 caractères !" data-error-visible="false">
                 <label>Nom :</label><br>
@@ -81,8 +79,7 @@
                   class="text-control"
                   type="text"
                   id="last"
-                  name="last"
-                /><br>
+                  name="last"/><br>
               </div>
               <div class="formData" data-error="Doit contenir une adresse mail valide !" data-error-visible="false">
                 <label>E-mail :</label><br>
@@ -91,8 +88,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="exemple@serveur.com"
-                /><br>
+                  placeholder="exemple@serveur.com"/><br>
               </div>
               <div class="formData" data-error="Doit être valide et antérieure à l'inscription !" data-error-visible="false">
                 <label>Date de naissance :</label><br>
@@ -100,8 +96,7 @@
                   class="text-control"
                   type="date"
                   id="birthdate"
-                  name="birthdate"
-                /><br>
+                  name="birthdate"/><br>
               </div>
               <!-- Get number of tournaments participated -->
               <div class="formData" data-error="Doit contenir une valeur numérique !" data-error-visible="false">
@@ -202,7 +197,7 @@
           <div class="submitConfirmation-form-msg">
             <p>Bravo votre réservation a été bien reçue !</p><br>
             <p>Un message de confirmation de votre inscription et les modalités du déroulement de l'événement vous 
-              seront envoyés à votre adresse email : <em id="confirmationUserEmail"></em> renseignée lors de votre inscription .</p><br>
+              seront envoyés à votre adresse email : (<em id="showUserEmail"></em>) renseignée lors de votre inscription .</p><br>
             <p>Toute l'équipe vous remercie pour l'intérêt que vous protez à nos événements !</p><br>
             <p>A bientôt !</p>
           </div>

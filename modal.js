@@ -213,7 +213,7 @@ modalSubmitConfirmationCloseBtn.addEventListener('click', submitConfirmationClos
 formControl.addEventListener('submit', function(event) {
   event.preventDefault();
   if (formValidation() === true) {
-    document.getElementById('confirmationUserEmail').innerHTML = userEmail.value;
+    document.getElementById('showUserEmail').innerHTML = userEmail.value;
     modalSubmitDisplay();
     document.querySelector('#modal-form').reset();
   } else {
