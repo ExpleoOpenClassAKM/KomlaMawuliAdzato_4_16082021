@@ -15,8 +15,8 @@ const checkOnelocationRadio = document.querySelectorAll('#location-box .checkbox
 const checkbox1 = document.getElementById('checkbox1');
 const inputTextControl = document.getElementsByClassName('text-control')[0];
 const formControl = document.getElementById('modal-form');
-const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
-const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
+const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 // Get form submit and confirmation
 const modalSubmit = document.getElementById('submitConfirmation-container');
@@ -55,7 +55,7 @@ closeBtn.onclick = function() {
 
 // First name
 function userFirstNameCheck() {
-  if (userFirstName.value.trim().length < 2 || userFirstName.value.trim() === "" || !userFirstName.value.match(regex)) {
+  if (userFirstName.value.trim().length < 2 || userFirstName.value.trim() === "" || !userFirstName.value.match(regexName)) {
     userFirstName.parentElement.setAttribute('data-error-visible', 'true');
     userFirstName.style.border = "2px solid #e54858";
     return false;
@@ -68,7 +68,7 @@ function userFirstNameCheck() {
 
 // Last name
 function userLastNameCheck() {
-  if (userLastName.value.trim().length < 2 || userLastName.value.trim() === "" || !userLastName.value.match(regex)) {
+  if (userLastName.value.trim().length < 2 || userLastName.value.trim() === "" || !userLastName.value.match(regexName)) {
     userLastName.parentElement.setAttribute('data-error-visible', 'true');
     userLastName.style.border = "2px solid #e54858";
     return false;
